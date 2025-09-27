@@ -1,0 +1,64 @@
+Configuration info
+==================
+Target platform:  aarch64-Linux-4.19.128-microsoft-standard
+Compiler:         gcc (9.4.0)
+Compile options:  [-march=armv8-a+crypto;-Wa,--noexecstack;-O3;-fomit-frame-pointer;-fdata-sections;-ffunction-sections;-Wl,--gc-sections;-Wbad-function-cast]
+OQS version:      0.14.1-dev (major: 0, minor: 14, patch: 1, pre-release: -dev)
+Git commit:       78e23891802a8bc058ad435491f1b5aefcef092a (+ local modifications)
+OpenSSL enabled:  No
+AES:              C
+SHA-2:            C
+SHA-3:            C
+OQS build flags:  BUILD_SHARED_LIBS OQS_DIST_BUILD OQS_LIBJADE_BUILD OQS_OPT_TARGET=generic CMAKE_BUILD_TYPE=Release 
+CPU exts active:  NEON
+Speed test
+==========
+Started at 2025-05-13 09:10:42
+Operation                            | Iterations | Total time (s) | Time (us): mean | pop. stdev | High-prec time (ns): mean | pop. stdev
+------------------------------------ | ----------:| --------------:| ---------------:| ----------:| -------------------------:| ----------:
+FrodoKEM-640-AES                     |            |                |                 |            |                           |           
+keygen                               |        642 |         10.011 |       15594.143 |   1433.580 |                  15594063 |    1433596
+encaps                               |        636 |         10.014 |       15745.020 |     13.599 |                  15744911 |      13597
+decaps                               |        634 |         10.011 |       15789.669 |     22.792 |                  15789566 |      22773
+public key bytes: 9616, ciphertext bytes: 9720, secret key bytes: 19888, shared secret key bytes: 16, NIST level: 1, IND-CCA: Y
+Ended at 2025-05-13 09:11:12
+
+Speed test
+==========
+Started at 2025-05-13 09:11:34
+Operation                            | Iterations | Total time (s) | Time (us): mean | pop. stdev | High-prec time (ns): mean | pop. stdev
+------------------------------------ | ----------:| --------------:| ---------------:| ----------:| -------------------------:| ----------:
+FrodoKEM-640-AES                     |            |                |                 |            |                           |           
+keygen                               |        642 |         10.002 |       15579.422 |   1748.582 |                  15579319 |    1748582
+encaps                               |        635 |         10.006 |       15757.490 |     37.272 |                  15757405 |      37277
+decaps                               |        637 |         10.009 |       15713.491 |     12.181 |                  15713362 |      12184
+public key bytes: 9616, ciphertext bytes: 9720, secret key bytes: 19888, shared secret key bytes: 16, NIST level: 1, IND-CCA: Y
+Ended at 2025-05-13 09:12:04
+
+Speed test
+==========
+Started at 2025-05-13 09:12:27
+Operation                            | Iterations | Total time (s) | Time (us): mean | pop. stdev | High-prec time (ns): mean | pop. stdev
+------------------------------------ | ----------:| --------------:| ---------------:| ----------:| -------------------------:| ----------:
+FrodoKEM-640-AES                     |            |                |                 |            |                           |           
+keygen                               |        645 |         10.009 |       15518.355 |   1768.431 |                  15518270 |    1768399
+encaps                               |        635 |         10.012 |       15767.230 |     12.399 |                  15767145 |      12373
+decaps                               |        638 |         10.013 |       15693.867 |     49.526 |                  15693765 |      49516
+public key bytes: 9616, ciphertext bytes: 9720, secret key bytes: 19888, shared secret key bytes: 16, NIST level: 1, IND-CCA: Y
+Ended at 2025-05-13 09:12:57
+
+Summary
+Operation                            | Iterations | Total time (s) | Time (us): mean | pop. stdev | High-prec time (ns): mean | pop. stdev
+------------------------------------ | ----------:| --------------:| ---------------:| ----------:| -------------------------:| ----------:
+FrodoKEM-640-AES                     |            |                |                 |            |                           |           
+1. keygen                               |        642 |         10.011 |       15594.143 |   1433.580 |                  15594063 |    1433596
+2. keygen                               |        642 |         10.002 |       15579.422 |   1748.582 |                  15579319 |    1748582
+3. keygen                               |        645 |         10.009 |       15518.355 |   1768.431 |                  15518270 |    1768399
+
+1. encaps                               |        636 |         10.014 |       15745.020 |     13.599 |                  15744911 |      13597
+2. encaps                               |        635 |         10.006 |       15757.490 |     37.272 |                  15757405 |      37277
+3. encaps                               |        635 |         10.012 |       15767.230 |     12.399 |                  15767145 |      12373
+
+1. decaps                               |        634 |         10.011 |       15789.669 |     22.792 |                  15789566 |      22773
+2. decaps                               |        637 |         10.009 |       15713.491 |     12.181 |                  15713362 |      12184
+3. decaps                               |        638 |         10.013 |       15693.867 |     49.526 |                  15693765 |      49516

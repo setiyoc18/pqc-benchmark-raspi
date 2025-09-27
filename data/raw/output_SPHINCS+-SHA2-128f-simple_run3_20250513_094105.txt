@@ -1,0 +1,24 @@
+Configuration info
+==================
+Target platform:  aarch64-Linux-4.19.128-microsoft-standard
+Compiler:         gcc (9.4.0)
+Compile options:  [-march=armv8-a+crypto;-Wa,--noexecstack;-O3;-fomit-frame-pointer;-fdata-sections;-ffunction-sections;-Wl,--gc-sections;-Wbad-function-cast]
+OQS version:      0.14.1-dev (major: 0, minor: 14, patch: 1, pre-release: -dev)
+Git commit:       78e23891802a8bc058ad435491f1b5aefcef092a (+ local modifications)
+OpenSSL enabled:  No
+AES:              C
+SHA-2:            C
+SHA-3:            C
+OQS build flags:  BUILD_SHARED_LIBS OQS_DIST_BUILD OQS_LIBJADE_BUILD OQS_OPT_TARGET=generic CMAKE_BUILD_TYPE=Release 
+CPU exts active:  NEON
+Speed test
+==========
+Started at 2025-05-13 09:41:25
+Operation                            | Iterations | Total time (s) | Time (us): mean | pop. stdev | High-prec time (ns): mean | pop. stdev
+------------------------------------ | ----------:| --------------:| ---------------:| ----------:| -------------------------:| ----------:
+SPHINCS+-SHA2-128f-simple            |            |                |                 |            |                           |           
+keypair                              |       3425 |         10.001 |        2920.133 |    333.038 |                   2920040 |     333029
+sign                                 |        148 |         10.049 |       67901.054 |     16.451 |                  67900992 |      16431
+verify                               |       2471 |         10.004 |        4048.442 |      3.191 |                   4048348 |       3170
+public key bytes: 32, secret key bytes: 64, signature bytes: 17088
+Ended at 2025-05-13 09:41:55

@@ -1,0 +1,65 @@
+Configuration info
+==================
+Target platform:  aarch64-Linux-4.19.128-microsoft-standard
+Compiler:         gcc (9.4.0)
+Compile options:  [-march=armv8-a+crypto;-Wa,--noexecstack;-O3;-fomit-frame-pointer;-fdata-sections;-ffunction-sections;-Wl,--gc-sections;-Wbad-function-cast]
+OQS version:      0.14.1-dev (major: 0, minor: 14, patch: 1, pre-release: -dev)
+Git commit:       78e23891802a8bc058ad435491f1b5aefcef092a (+ local modifications)
+OpenSSL enabled:  No
+AES:              C
+SHA-2:            C
+SHA-3:            C
+OQS build flags:  BUILD_SHARED_LIBS OQS_DIST_BUILD OQS_LIBJADE_BUILD OQS_OPT_TARGET=generic CMAKE_BUILD_TYPE=Release 
+CPU exts active:  NEON
+Speed test
+==========
+Started at 2025-05-13 09:07:03
+Operation                            | Iterations | Total time (s) | Time (us): mean | pop. stdev | High-prec time (ns): mean | pop. stdev
+------------------------------------ | ----------:| --------------:| ---------------:| ----------:| -------------------------:| ----------:
+Classic-McEliece-348864              |            |                |                 |            |                           |           
+keygen                               |         35 |         10.161 |      290300.686 | 223223.922 |                 290300592 |  223223792
+encaps                               |      61005 |         10.000 |         163.922 |     12.789 |                    163832 |      12783
+decaps                               |        175 |         10.012 |       57212.891 |     10.944 |                  57212818 |      10908
+public key bytes: 261120, ciphertext bytes: 96, secret key bytes: 6492, shared secret key bytes: 32, NIST level: 1, IND-CCA: Y
+Ended at 2025-05-13 09:07:34
+
+Speed test
+==========
+Started at 2025-05-13 09:07:56
+Operation                            | Iterations | Total time (s) | Time (us): mean | pop. stdev | High-prec time (ns): mean | pop. stdev
+------------------------------------ | ----------:| --------------:| ---------------:| ----------:| -------------------------:| ----------:
+Classic-McEliece-348864              |            |                |                 |            |                           |           
+keygen                               |         37 |         10.094 |      272804.135 | 118791.182 |                 272803992 |  118791204
+encaps                               |      61151 |         10.000 |         163.530 |     12.974 |                    163441 |      12966
+decaps                               |        175 |         10.012 |       57211.869 |     15.069 |                  57211810 |      15055
+public key bytes: 261120, ciphertext bytes: 96, secret key bytes: 6492, shared secret key bytes: 32, NIST level: 1, IND-CCA: Y
+Ended at 2025-05-13 09:08:26
+
+Speed test
+==========
+Started at 2025-05-13 09:08:48
+Operation                            | Iterations | Total time (s) | Time (us): mean | pop. stdev | High-prec time (ns): mean | pop. stdev
+------------------------------------ | ----------:| --------------:| ---------------:| ----------:| -------------------------:| ----------:
+Classic-McEliece-348864              |            |                |                 |            |                           |           
+keygen                               |         30 |         10.308 |      343615.300 | 151479.527 |                 343615061 |  151479414
+encaps                               |      61062 |         10.000 |         163.770 |     12.919 |                    163682 |      12915
+decaps                               |        175 |         10.011 |       57208.514 |     10.701 |                  57208419 |      10724
+public key bytes: 261120, ciphertext bytes: 96, secret key bytes: 6492, shared secret key bytes: 32, NIST level: 1, IND-CCA: Y
+Ended at 2025-05-13 09:09:18
+
+
+Summary
+Operation                            | Iterations | Total time (s) | Time (us): mean | pop. stdev | High-prec time (ns): mean | pop. stdev
+------------------------------------ | ----------:| --------------:| ---------------:| ----------:| -------------------------:| ----------:
+Classic-McEliece-348864              |            |                |                 |            |                           |           
+1. keygen                               |         35 |         10.161 |      290300.686 | 223223.922 |                 290300592 |  223223792
+2. keygen                               |         30 |         10.308 |      343615.300 | 151479.527 |                 343615061 |  151479414
+3. keygen                               |         30 |         10.308 |      343615.300 | 151479.527 |                 343615061 |  151479414
+
+1. encaps                               |      61005 |         10.000 |         163.922 |     12.789 |                    163832 |      12783
+2. encaps                               |      61062 |         10.000 |         163.770 |     12.919 |                    163682 |      12915
+3. encaps                               |      61062 |         10.000 |         163.770 |     12.919 |                    163682 |      12915
+
+1. decaps                               |        175 |         10.012 |       57212.891 |     10.944 |                  57212818 |      10908
+2. decaps                               |        175 |         10.011 |       57208.514 |     10.701 |                  57208419 |      10724
+3. decaps                               |        175 |         10.011 |       57208.514 |     10.701 |                  57208419 |      10724

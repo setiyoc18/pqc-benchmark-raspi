@@ -1,0 +1,64 @@
+Configuration info
+==================
+Target platform:  aarch64-Linux-4.19.128-microsoft-standard
+Compiler:         gcc (9.4.0)
+Compile options:  [-march=armv8-a+crypto;-Wa,--noexecstack;-O3;-fomit-frame-pointer;-fdata-sections;-ffunction-sections;-Wl,--gc-sections;-Wbad-function-cast]
+OQS version:      0.14.1-dev (major: 0, minor: 14, patch: 1, pre-release: -dev)
+Git commit:       78e23891802a8bc058ad435491f1b5aefcef092a (+ local modifications)
+OpenSSL enabled:  No
+AES:              C
+SHA-2:            C
+SHA-3:            C
+OQS build flags:  BUILD_SHARED_LIBS OQS_DIST_BUILD OQS_LIBJADE_BUILD OQS_OPT_TARGET=generic CMAKE_BUILD_TYPE=Release 
+CPU exts active:  NEON
+Speed test
+==========
+Started at 2025-05-13 09:29:39
+Operation                            | Iterations | Total time (s) | Time (us): mean | pop. stdev | High-prec time (ns): mean | pop. stdev
+------------------------------------ | ----------:| --------------:| ---------------:| ----------:| -------------------------:| ----------:
+ML-DSA-65                            |            |                |                 |            |                           |           
+keypair                              |      26210 |         10.000 |         381.544 |     35.795 |                    381453 |      35785
+sign                                 |       6217 |         10.002 |        1608.870 |   1096.614 |                   1608776 |    1096618
+verify                               |      26430 |         10.000 |         378.371 |      4.820 |                    378281 |       4792
+public key bytes: 1952, secret key bytes: 4032, signature bytes: 3309
+Ended at 2025-05-13 09:30:09
+
+Speed test
+==========
+Started at 2025-05-13 09:30:31
+Operation                            | Iterations | Total time (s) | Time (us): mean | pop. stdev | High-prec time (ns): mean | pop. stdev
+------------------------------------ | ----------:| --------------:| ---------------:| ----------:| -------------------------:| ----------:
+ML-DSA-65                            |            |                |                 |            |                           |           
+keypair                              |      26247 |         10.000 |         381.006 |     35.801 |                    380919 |      35793
+sign                                 |       6262 |         10.001 |        1597.094 |   1111.209 |                   1597002 |    1111206
+verify                               |      26464 |         10.000 |         377.877 |      4.825 |                    377791 |       4810
+public key bytes: 1952, secret key bytes: 4032, signature bytes: 3309
+Ended at 2025-05-13 09:31:01
+
+Speed test
+==========
+Started at 2025-05-13 09:31:23
+Operation                            | Iterations | Total time (s) | Time (us): mean | pop. stdev | High-prec time (ns): mean | pop. stdev
+------------------------------------ | ----------:| --------------:| ---------------:| ----------:| -------------------------:| ----------:
+ML-DSA-65                            |            |                |                 |            |                           |           
+keypair                              |      26158 |         10.000 |         382.300 |     43.608 |                    382214 |      43593
+sign                                 |       6144 |         10.001 |        1627.747 |   1121.534 |                   1627666 |    1121537
+verify                               |      26444 |         10.000 |         378.164 |      8.470 |                    378079 |       8457
+public key bytes: 1952, secret key bytes: 4032, signature bytes: 3309
+Ended at 2025-05-13 09:31:53
+
+Summary
+Operation                            | Iterations | Total time (s) | Time (us): mean | pop. stdev | High-prec time (ns): mean | pop. stdev
+------------------------------------ | ----------:| --------------:| ---------------:| ----------:| -------------------------:| ----------:
+ML-DSA-65                            |            |                |                 |            |                           |           
+1. keypair                              |      26210 |         10.000 |         381.544 |     35.795 |                    381453 |      35785
+2. keypair                              |      26247 |         10.000 |         381.006 |     35.801 |                    380919 |      35793
+3. keypair                              |      26158 |         10.000 |         382.300 |     43.608 |                    382214 |      43593
+
+1. sign                                 |       6217 |         10.002 |        1608.870 |   1096.614 |                   1608776 |    1096618
+2. sign                                 |       6262 |         10.001 |        1597.094 |   1111.209 |                   1597002 |    1111206
+3. sign                                 |       6144 |         10.001 |        1627.747 |   1121.534 |                   1627666 |    1121537
+
+1. verify                               |      26430 |         10.000 |         378.371 |      4.820 |                    378281 |       4792
+2. verify                               |      26464 |         10.000 |         377.877 |      4.825 |                    377791 |       4810
+3. verify                               |      26444 |         10.000 |         378.164 |      8.470 |                    378079 |       8457
