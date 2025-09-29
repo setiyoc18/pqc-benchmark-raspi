@@ -2,7 +2,9 @@
 
 This repository contains the supplementary materials for the paper:
 
-**"Benchmarking Post-Quantum Cryptography Algorithms on Resource-Constrained IoT-Class Hardware"**
+**"Energy-Aware Benchmarking of Post-Quantum Cryptographic Algorithms on Raspberry Pi"**
+
+**"Energy-Aware Benchmarking of Post-Quantum Cryptographic Algorithms on Resource-Constrained IoT-Class Hardware"**
 
 ---
 
